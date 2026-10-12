@@ -1,0 +1,90 @@
+
+* {
+    font-family: sans-serif;
+}
+
+.dices{
+    padding: 20px;
+    column-count: 5;
+    column-fill: balance;
+    color: black;
+}
+
+.headings{
+    padding: 10px;
+    column-count: 5;
+    column-fill: balance;
+}
+
+.credits{
+    column-count: 5;
+    column-fill: balance;
+    color: black;
+    font-weight: bolder;
+
+}
+
+.text-center{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.computer-name{
+    font-size: 3em;
+}
+.player-name{
+    font-size: 3em;
+}
+
+.dices-computer-player{
+    column-count: 2;
+}
+
+.dices-player{
+    column-count: 2;
+}
+
+.message{
+    column-count: 3;
+    column-fill: balance;
+
+}
+
+.message-box{
+    border: 4px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border-radius: 45px;
+    font-weight: bold;
+}
+
+.controls{
+    padding: 10px;
+    column-count: 6;
+    column-fill: balance;
+}
+
+.dice{
+    font-size: 80pt;
+}
+
+button{
+    width: 76%;
+    background-color: white;
+    font-weight: bold;
+}
+
+.background {
+    background-color: blue;
+    background-image: url(/IMG/istockphoto-1182467056-612x612.jpg);
+    background-repeat: no-repeat;
+    height: 990px;
+    background-size: cover;
+    background-position: center;
+}
+
+.ptext{
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+}

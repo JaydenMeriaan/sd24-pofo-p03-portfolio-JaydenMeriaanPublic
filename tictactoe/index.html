@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ttt.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="btn-group">
+        <button class="button1">Spelregels</button>
+        <button class="restartbutton">Herstel Keuze</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Tic Tac Toe</h1>
+        </header>
+
+        <div class="scoreboard">
+            <p>Speler 1  | X: <span id="player1Name">Onbekend</span> - Score: <span id="player1Score">0</span></p>
+            <p>Speler 2  | O: <span id="player2Name">Speler 2</span> - Score: <span id="player2Score">0</span></p>
+            <h2 class="game-status"></h2>
+        </div>
+
+        <div class="grid-container">
+            <div cellindex="1" class="grid-item"></div>
+            <div cellindex="2" class="grid-item"></div>
+            <div cellindex="3" class="grid-item"></div>
+            <div cellindex="4" class="grid-item"></div>
+            <div cellindex="5" class="grid-item"></div>
+            <div cellindex="6" class="grid-item"></div>
+            <div cellindex="7" class="grid-item"></div>
+            <div cellindex="8" class="grid-item"></div>
+            <div cellindex="9" class="grid-item"></div>
+        </div>
+    </div>
+
+    <script src="ttt.js"></script>
+</body>
+</html>

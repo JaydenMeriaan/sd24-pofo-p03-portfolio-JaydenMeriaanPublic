@@ -1,0 +1,172 @@
+/* Algemene body-instellingen */
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/IMG/achtergronbd\ game.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Grid instellingen voor de gameknoppen */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 180px); 
+  grid-template-rows: repeat(3, 180px); 
+  gap: 10px;
+  margin-bottom: 270px;
+}
+
+/* Grid-item stijlen met verfijnde schaduwen en glow-effecten */
+.grid-item {
+  border: 8px solid rgba(255, 215, 0, 0.8); /* Neon gouden rand */
+  padding: 50px; 
+  font-size: 64px; 
+  text-align: center;
+  border-radius: 34%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; 
+  background: rgba(255, 255, 255, 0.1); /* Subtiele doorzichtige achtergrond */
+  backdrop-filter: blur(10px); /* Vervaging van achtergrond voor diepte */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 215, 0, 0.5); /* Schaduwen met een gloei-effect */
+  transition: transform 0.4s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover-effect voor grid-items: vergroot en draai met gloed */
+.grid-item:hover {
+  background-color: rgba(0, 0, 0, 0.4); /* Donkere achtergrond bij hover */
+  cursor: pointer;
+  transform: scale(1.1) rotate(5deg); /* Vergroting en lichte rotatie */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 70px rgba(255, 215, 0, 0.8); /* Intensievere schaduw en gloed */
+  border-color: rgba(255, 215, 0, 1); /* Versterk de gouden rand bij hover */
+  animation: pulse 1s infinite alternate; /* Pulserende animatie voor extra effect */
+}
+
+/* Pulserende animatie voor grid-items bij hover */
+@keyframes pulse {
+  0% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  100% {
+    transform: scale(1.15) rotate(7deg);
+  }
+}
+
+/* Glow-effect voor de tekst in de grid-item */
+.grid-item span {
+  color: #ffdd57; /* Neon gele tekstkleur */
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6); /* Glow voor de tekst */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Glow-effect voor de tekst in de grid-items bij hover */
+.grid-item:hover span {
+  color: #ffcc00; /* Lichtere gele kleur bij hover */
+  text-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 1); /* Intensievere gloed bij hover */
+}
+
+/* Knoppen-groep styling */
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+  animation: buttonFadeIn 2s ease-out forwards;
+}
+
+@keyframes buttonFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Stijlen voor knoppen met een neon-effect */
+.button1, .restartbutton {
+  background: linear-gradient(135deg, #00ff00, #39b300); /* Neon groen-gloed */
+  border: 2px solid #28a745;
+  color: rgb(255, 249, 249);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding: 15px 30px;
+  font-size: 16px; 
+  cursor: pointer;
+  width: 150px;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 255, 0, 0.6); /* Neon-glow schaduw */
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect voor knoppen */
+.button1:hover, .restartbutton:hover {
+  background: linear-gradient(135deg, #1f8e39, #66d98e); /* Lichtere neon-gloed */
+  box-shadow: 0 20px 50px rgba(0, 255, 0, 0.8); /* Vergrote gloed */
+  transform: scale(1.1) rotate(5deg); /* Vergroting met rotatie */
+}
+
+/* Game-status en naam-stijlen met tekstschaduw */
+.game-status {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;  
+  font-weight: bolder;
+  color: #f9d342; /* Gouden kleur voor de status */
+  text-shadow: 0 4px 10px rgba(255, 215, 0, 0.8); /* Glansgloed om de tekst */
+  animation: textGlow 1.5s infinite alternate;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Glow effect bij hover */
+@keyframes textGlow {
+  0% { color: #f9d342; text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
+  100% { color: #ffdd57; text-shadow: 0 0 20px rgba(255, 215, 0, 1); }
+}
+
+.game-status:hover {
+  color: darkgreen;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#player1Name, #player2Name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Schaduw voor diepte */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover-effect voor de naam van de speler */
+#player1Name:hover, #player2Name:hover {
+  color: #ffdd57;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* Scorebord stijlen met dynamisch effect */
+.scoreboard {
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: highlightScore 2s ease-out forwards;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Glanzende score animatie */
+@keyframes highlightScore {
+  0% { color: gold; text-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+  50% { color: white; text-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
+  100% { color: gold; text-shadow: 0 0 30px rgba(255, 215, 0, 1); }
+}
